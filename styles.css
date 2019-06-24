@@ -1,4 +1,4 @@
- /* Global Layout Set-up */
+/* Global Layout Set-up */
 * { 
   box-sizing: border-box;
 }
@@ -38,7 +38,6 @@ a:hover {
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
-  z-index: 9999 !important;
 }
 
 .nav .name {
@@ -59,9 +58,8 @@ a:hover {
 header {
   text-align: center;
   background: url('images/portland.jpg') no-repeat top center ;
-  background-size: 100%;
+  background-size: cover;
   overflow: hidden;
-  background-position: bottom;
   padding-top: 60px;
 }
 header {
@@ -79,28 +77,29 @@ header .profile-image:hover {
   transform: scale(1.2) rotate(5deg);
 }
 .tag {
-  background-color: #BF2C2C;
+  background-color: #efefef;
+  color: black;
   padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
 } 
 .location {
-  background-color: #BF2C2C;
-  color: #F2F2F2;
+  background-color: #222;
+  color: red;
 }
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: left;
-  background: #BF2C2C !important;
-  border-bottom: 4px solid #BF2C2C;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
   border-radius: 6px;
   transition: all .5s;
 }
 .card:hover {
-  border-color: #BF2C2C;
+  border-color: red;
 }
 
 ul.skills {
@@ -111,16 +110,14 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #f2f2f2;
-  color: #0D0D0D !important;
+  background: red;
   color: white;
   padding: 5px 10px;
   margin: 2px;
 }
 
 .skills li:nth-child(odd) {
-  background: #0D0D0D;
-  color: #f2f2f2 !important;
+  background: #222222;
 }
 
 footer {
@@ -154,18 +151,7 @@ a.social {
   opacity: .4;
   transition: all .5s;
 }
-a.twitter {
-  background-image: url(images/twitter.svg);
-}
-a.linkedin {
-  background-image: url(images/linkedin.svg);
-}
-a.github {
-  background-image: url(images/github.svg);
-}
-a.social:hover {
-  opacity: 1;
-}
+
 .clearfix {
   clear: both;
 }
@@ -180,7 +166,6 @@ a.social:hover {
       -ms-flex-pack: distribute;
       justify-content: space-around;
       margin: 0 auto;
-      padding: 0;
   }
 
   header {
@@ -197,7 +182,154 @@ a.social:hover {
     padding-top: 20px;
   }
 
-  main p {
+  main p {body {
+    margin : 0;
+    padding : 0;
+    text-align : center;
+    font-family : 'Roboto', sans-serif;
+    color : #222;
+    background : #f7f5f0;
+    }
+    a {
+    text-decoration : none;
+    color : #999;
+    }
+    a:hover {
+    color : #6633ff;
+    }
+    .main-nav {
+    width : 100%;
+    background : black;
+    min-height : 30px;
+    padding : 10px;
+    position : fixed;
+    text-align : center;
+    }
+    .nav {
+    font-weight : 700;
+    list-style-type : none;
+    margin : 0 auto;
+    padding : 0;
+    }
+    .nav .name {
+    display : block;
+    margin-right : auto;
+    color : white;
+    }
+    .nav li {
+    padding : 5px 10px 10px 10px;
+    }
+    .nav a:hover {
+    color : white;
+    }
+    header {
+    text-align : center;
+    background : url('images/portland.jpg') no-repeat center top;
+    overflow : hidden;
+    padding-top : 60px;
+    }
+    header {
+    line-height : 1.5;
+    }
+    header .profile-image {
+    margin-top : 50px;
+    width : 150px;
+    height : 150px;
+    border : 3px solid white;
+    }
+    .tag {
+    background-color : #efefef;
+    color : black;
+    padding : 10px;
+    display : table;
+    margin : 10px auto;
+    }
+    .location {
+    background-color : #222;
+    color : red;
+    }
+    .card {
+    margin : 30px;
+    padding : 20px 40px 40px;
+    max-width : 500px;
+    text-align : left;
+    background : #fff;
+    border-bottom : 4px solid #ccc;
+    }
+    .card:hover {
+    border-color : red;
+    }
+    ul.skills {
+    padding : 0;
+    text-align : center;
+    }
+    .skills li {
+    display : inline-block;
+    background : red;
+    color : white;
+    padding : 5px 10px;
+    margin : 2px;
+    }
+    footer {
+    width : 100%;
+    min-height : 30px;
+    padding : 20px 0 40px 20px;
+    }
+    footer .copyright {
+    top : -8px;
+    font-size : 0.75em;
+    }
+    footer ul {
+    list-style-type : none;
+    margin : 0;
+    padding : 0;
+    }
+    footer ul li {
+    display : inline-block;
+    }
+    a.social {
+    display : inline-block;
+    text-indent : -9999px;
+    margin-left : 5px;
+    width : 30px;
+    height : 30px;
+    }
+    a.twitter {
+    background-image : url(images/twitter.svg);
+    }
+    a.linkedin {
+    background-image : url(images/linkedin.svg);
+    }
+    a.github {
+    background-image : url(images/github.svg);
+    }
+    .clearfix {
+    clear : both;
+    }
+    @media screen {
+    .flex {
+    max-width : 1200px;
+    margin : 0 auto;
+    }
+    header {
+    min-height : 470px;
+    }
+    .nav {
+    max-width : 1200px;
+    padding : 0 30px;
+    }
+    main {
+    padding-top : 20px;
+    }
+    main p {
+    line-height : 1.6em;
+    }
+    footer {
+    font-size : 1.3em;
+    max-width : 1200px;
+    margin : 40px auto;
+    }
+    }
     line-height: 1.6em;
   }
 
@@ -209,176 +341,3 @@ a.social:hover {
 
 }
 
-  /* Button Styles */
-  .btn-primary {
-    background-color: #BF2C2C;
-    border: 2.5px solid #BF2C2C;
-    transition: all 1s;
-    color: #fff;
-    font-family: noto-sans, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: normal;
-    line-height: 1.5;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    padding: 4px 25px;
-  }
-  .btn-primary:hover {
-    background-color: transparent;
-    border: 2.5px solid #BF2C2C;
-    color: #BF2C2C !important;
-    transition: all 1s;
-    transform: scale(0.95);
-  }
-  .btn-inverse {
-    background-color: transparent !important;
-    border: 2.5px solid #fff !important;
-    transition: all 1s;
-    color: #fff !important;
-    font-family: noto-sans, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: normal;
-    line-height: 1.5;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    padding: 4px 25px;
-  }
-  .btn-inverse:hover {
-    background-color: #ffffff !important;
-    border: 2.5px solid #ffffff !important;
-    color: #BF2C2C !important;
-    transition: all 1s;
-    transform: scale(1.05);
-  }
-  
-  /* about styling */
-  #about  {
-    color: #F2F2F2 !important;
-    padding: 10%;
-    margin: 0 !important;
-    background-color: #BF2C2C;
-  }
-  #about h2 {
-    margin-bottom: 25px;
-  }
-  #about .btn {
-    margin-top: 15px;
-  }
-  #about .center {
-    padding: 5%;
-  }
-  #about .center h2 {
-    margin-bottom: 25px;
-  }
-  #about .center .btn {
-    margin-top: 15px;
-  }
-  
-  .bar-main-container {
-    margin: 10px auto;
-    width: 500px;
-    height: 50px;
-    border-radius: 4px;
-    font-family: sans-serif;
-    font-weight: normal;
-    font-size: 0.8em;
-    color: #FFF;
-    display: inline-table;
-  }
-  
-  .wrap { padding: 8px; }
-  
-  .bar-percentage {
-    float: left;
-    background: rgba(0,0,0,0.13);
-    border-radius: 4px;
-    padding: 9px 0px;
-    width: 20%;
-    height: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: inline-table;
-    text-align: center;
-  }
-  
-  .bar-container {
-    float: right;
-    border-radius: 10px;
-    height: 10px;
-    background: rgba(0,0,0,0.13);
-    width: 70%;
-    margin: 12px 0px;
-    overflow: hidden;
-  }
-  
-  .bar {
-    float: left;
-    background: #FFF;
-    height: 100%;
-    border-radius: 10px 0px 0px 10px;
-    filter: alpha(opacity=100);
-    opacity: 1;
-  }
-  @import url("https://use.typekit.net/gkw3tkq.css");
-
-  .content-1 {
-    font-family: noto-sans, sans-serif;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: -1px;
-    line-height: 49px;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    }
-    .content-2 {
-    font-family: noto-serif, serif;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: 1.25px;
-    line-height: 1.25;
-    text-transform: none;
-    color: #FFFFFF;
-  }
-  .content-3 {
-    font-family: noto-sans, sans-serif;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: 1.35px;
-    line-height: 35px;
-    font-weight: 600;
-    word-spacing: -5px;
-    text-transform: capitalize;
-    color: #ffffff !important;
-  }
-  .content-4 {
-    font-family: noto-serif, serif;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: normal;
-    letter-spacing: 1.17px;
-    line-height: 1.25;
-    text-transform: none;
-    color: #FFFFFF;
-  }
-  .bodyWrapper {
-    padding: 0;
-    margin: 0;
-  }
-  .center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
